@@ -1,0 +1,60 @@
+# database
+la, ua, pa, da = 0, 0, 0, 0
+capitalalphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+smallalphabets = "abcdefghijklmnopqrstuvwxyz"
+specialchar = "*_#"
+digits = "0123456789"
+
+# error dict
+errorLength = "unacceptable length of password"
+errorNumb = "missing numbers"
+errorUpper = "missing capital letters"
+errorLow = "missing lowercase letters"
+errorSymbol = "unacceptable symbols u cant remember it"
+
+# checlking
+def pass_check(password):
+    l,u,p,d = 0,0,0,0
+    for i in password:
+        # counting lowercase alphabets
+        if (i in smallalphabets):
+            l+=1
+        # counting uppercase alphabets
+        if (i in capitalalphabets):
+            u+=1
+        # counting digits
+        if (i in digits):
+            d+=1
+        # counting the mentioned special characters
+        if(i in specialchar):
+            p+=1
+    # glob decl
+    global la
+    la = l
+    global ua
+    ua = u
+    global da
+    da = d
+    global pa
+    pa = p
+
+password = input('enter the pass\n')
+pass_check(password)
+
+# output
+if (len(password)==8):
+    if(la>=1):
+        if(ua>=1):
+            if(da>=1):
+                if (pa >= 1):
+                    print('The password is perfect')
+                else:
+                    print(errorSymbol)
+            else:
+                print(errorNumb)
+        else:
+            print(errorUpper)
+    else:
+        print(errorLow)
+else:
+    print(errorLength)
