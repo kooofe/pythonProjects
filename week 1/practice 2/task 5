@@ -1,0 +1,10 @@
+secret_numb = "458"
+counter = 0
+
+while True:
+    numb = input("guess the numb: ").lower()
+    counter = counter + 1
+    if numb == secret_numb:
+        break
+    if numb != secret_numb and counter > 7:
+        break
