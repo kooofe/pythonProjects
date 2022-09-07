@@ -1,0 +1,9 @@
+name = input("Your last name, first name?\n")
+list = name.split(' ')
+print(list)
+age = input('How old are you?\n')
+phoneNumber = input('Your phone number?\n')
+# output
+print('Your first name', list[0], 'and last name is', list[1])
+print('Your age ', age)
+print('Your phone number', phoneNumber)
