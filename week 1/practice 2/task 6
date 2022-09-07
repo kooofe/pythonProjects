@@ -1,0 +1,15 @@
+# 1part
+for x in range(101):
+    if x < 50:
+        print(x)
+    elif x > 99:
+        print(x)
+
+# 2part
+n = 0
+while (n <= 100):
+    if n < 50:
+        print(n)
+    elif n > 99:
+        print(n)
+    n = n + 1
