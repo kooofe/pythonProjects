@@ -1,0 +1,15 @@
+def season_events(number_of_month):
+    if number_of_month == 12 or number_of_month <= 2:
+        return 'White snow fell outside the window'
+    elif number_of_month < 5:
+        return '"Birds sang beautiful songs'
+    elif number_of_month < 8:
+        return 'The sun shone brighter than ever'
+    elif number_of_month < 11:
+        return 'The harvest was incredible'
+    else:
+        return False
+
+print('enter the n of m')
+number_of_month = int(input())
+print(season_events(number_of_month))
