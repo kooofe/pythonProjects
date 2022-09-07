@@ -1,0 +1,5 @@
+startNumb = 37
+while startNumb != 67:
+    if startNumb % 2 == 0:
+        print(startNumb)
+    startNumb = startNumb + 1
