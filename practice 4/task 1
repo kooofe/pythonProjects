@@ -1,0 +1,3 @@
+costPerKg = int(input('cost plz\n'))
+for x in range(1, 10):
+    print('cost for', x, 'kg of sweets is', costPerKg * x)
