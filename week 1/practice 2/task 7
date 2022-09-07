@@ -1,0 +1,7 @@
+word = input("word plz\n")
+numb = int(input("numb plz\n"))
+
+for x in word:
+    for n in range(0,numb):
+        print(x, end="")
+    print()
