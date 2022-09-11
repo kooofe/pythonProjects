@@ -1,15 +1,20 @@
-def season_events(number_of_month):
-    if number_of_month == 12 or number_of_month <= 2:
-        return 'White snow fell outside the window'
-    elif number_of_month < 5:
-        return '"Birds sang beautiful songs'
-    elif number_of_month < 8:
-        return 'The sun shone brighter than ever'
-    elif number_of_month < 11:
-        return 'The harvest was incredible'
-    else:
-        return False
+month = ["January", "February", "March", "April", "May", "June", "July",
+         "August", "September", "October", "November", "December"]
 
-print('enter the n of m')
+
+def season_events(number_of_month):
+    if number_of_month > 12 or number_of_month < 1:
+        print("You need to enter the real number of the month ")
+    elif number_of_month == 12 or number_of_month <= 2:
+        print('You were born in', month[number_of_month-1], '. White snow fell outside the window')
+    elif number_of_month < 5:
+        print( 'You were born in', month[number_of_month-1], '. Birds sang beautiful songs')
+    elif number_of_month < 8:
+        print( 'You were born in', month[number_of_month-1], '. The sun shone brighter than ever')
+    else:
+        print( 'You were born in', month[number_of_month-1], '. The harvest was incredible')
+
+
+print('enter the n of m\n')
 number_of_month = int(input())
-print(season_events(number_of_month))
+season_events(number_of_month)
