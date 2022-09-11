@@ -1,4 +1,4 @@
-startNumb = 37
+startNumb = 34
 while startNumb != 67:
     if startNumb % 2 == 0:
         print(startNumb)
